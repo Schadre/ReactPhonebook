@@ -58,23 +58,23 @@ const ContactForm = (props: ContactFormProps) => {
   return (
     <div>
         <form className='p-10' onSubmit={handleSubmit(onSubmit)}>
-                <div>
+                <div className='p-5'>
                   <label htmlFor="First Name">Contact First Name</label>
                   <Input {...register('first')} name='first' placeholder="First Name"/>
                 </div>  
-                <div>
+                <div className='p-5'>
                   <label htmlFor="Last Name">Contact Last Name</label>
                   <Input {...register('last')} name='last' placeholder="Last Name"/>
                 </div>
-                <div>
+                <div className='p-5'>
                   <label htmlFor="Email">Contact Email</label>
                   <Input {...register('email')} name='email' placeholder="Email"/>
                 </div>
-                <div>
+                <div className='p-5'>
                   <label htmlFor="Phone Number">Contact Phone Number</label>
                   <Input {...register('phone_number')} name='phone_number' placeholder="Phone Number"/>
                 </div>
-                <div>
+                <div className='p-5'>
                   <label htmlFor="Address">Contact Address</label>
                   <Input {...register('address')} name='address' placeholder="Street Address"/>
                 </div>

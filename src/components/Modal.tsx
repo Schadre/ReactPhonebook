@@ -52,7 +52,7 @@ const Modal = (props: Props) => {
               <i className="fa-solid fa-xmark"></i>
             </p>
           </div>
-          <div className="flex flex-col items-center text-center mt-3 p-2 text-red-200">
+          <div className="flex flex-col items-center text-center mt-3 p-3 text-red-200 mb-5">
             <ContactForm
               id={props.id}
               contactToUpdate={props.contactData}
