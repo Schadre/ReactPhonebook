@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.modal-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.my-form input {
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+button:hover {
+    color: rgb(127, 29, 29);
+    opacity: 1;
+  }
+  
+.card {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    border: 2px solid rgba(127, 29, 29, 0.5);
+    padding: 10px; 
+    width: 250px; 
+    margin: 10px; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card.border-red-200 {
+  border-color: rgb(254, 202, 202);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.logo-4 {
+  margin-top: -20px;
+  width: 100px;
+  height: 145px;
+  transition: transform 0.3s ease;
+}
+
+.logo-5 {
+  margin-top: -20px;
+  filter: invert(1);
+  width: 100px;
+  height: 130px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover, .logo-4:hover, .logo-5:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+
+@media (max-width: 300px) {
+    html { font-size: 75%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 85%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 100%; }
+    
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 120%; }
+}
