@@ -8,6 +8,7 @@
 
 .modal-video-background {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,7 +20,6 @@
 .my-form input {
   color: rgb(255, 255, 255);
   opacity: 0.5;
-
 }
 
 button:hover {
@@ -78,4 +78,21 @@ button:hover {
   50% {
     transform: translateY(-30px);
   }
+}
+
+@media (max-width: 300px) {
+    html { font-size: 75%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 85%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 100%; }
+    
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 120%; }
 }

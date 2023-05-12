@@ -35,7 +35,7 @@ const Modal = (props: Props) => {
       className="fixed w-full h-full flex overflow-auto z-1 justify-center align-middle bg-opacity-25"
     >
       <div
-        className="max-w-800px w-3/5 fixed flex z-1 mt-20 shadow-xl"
+        className="modal max-w-800px w-3/5 fixed flex z-1 mt-20 shadow-xl"
         onClick={(e) => {
           e.stopPropagation();
         }}
