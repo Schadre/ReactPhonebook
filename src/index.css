@@ -6,6 +6,25 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
+.modal-content {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+@media (max-width: 640px) {
+  .modal {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modal-content {
+    overflow-y: auto;
+  }
+}
+
+
 .modal-video-background {
   position: absolute;
   overflow: hidden;
