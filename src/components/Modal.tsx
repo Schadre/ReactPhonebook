@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import video from '../assets/video/movingmountains.mp4';
 import ContactForm from './ContactForm';
 
@@ -27,22 +27,41 @@ const Modal = (props: Props) => {
     address: '',
   });
 
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 640);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   if (!props.open) return <></>;
 
   return (
     <div
       onClick={props.onClose}
-      className="fixed w-full h-full flex overflow-auto z-1 justify-center align-middle bg-opacity-25"
+      className={`fixed w-full h-full flex z-1 justify-center align-middle bg-opacity-25 ${
+        isLargeScreen ? 'overflow-auto' : ''
+      }`}
     >
       <div
-        className="max-w-800px w-3/5 fixed flex z-1 mt-20 shadow-xl"
+        className={`max-w-800px w-3/5 fixed flex z-1 mt-20 shadow-xl ${
+          !isLargeScreen ? 'overflow-y-auto h-full' : ''
+        }`}
         onClick={(e) => {
           e.stopPropagation();
         }}
       >
-        <video autoPlay loop muted className="modal-video-background">
-          <source src={video} type="video/mp4" />
-        </video>
+        {isLargeScreen && (
+          <video autoPlay loop muted className="modal-video-background">
+            <source src={video} type="video/mp4" />
+          </video>
+        )}
         <div className="w-full flex flex-col">
           <div className="flex flex-row space-apart">
             <p

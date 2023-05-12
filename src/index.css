@@ -98,7 +98,8 @@ button:hover {
 }
 
 @media (max-width: 640px) {
-  .modal-video-background {
-    display: none;
+  div .modal-video-background {
+    display: none !important;
   }
 }
+

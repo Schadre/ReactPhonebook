@@ -78,7 +78,7 @@ const ContactForm = (props: ContactFormProps) => {
                   <label htmlFor="Address">Contact Address</label>
                   <Input {...register('address')} name='address' placeholder="Street Address"/>
                 </div>
-                <div className='flex p-10'>
+                <div className='flex p-20'>
                 <button
                   className="bg-red-900 opacity-50 hover:bg-red-200 text-red-200 font-semibold py-2 px-4 rounded shadow mr-2"
                   onClick={handleDelete}
